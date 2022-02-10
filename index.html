@@ -1,124 +1,16 @@
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>
-            Hello
-        </title>
+        <title>Hello</title>
     </head>
     <body>
-        <h1>
-            Shashank Pasumarthi
-        </h1>
+        <h1>Shashank Pasumarthi</h1>
+        <h6> Pizza Hut </h6>
+        <p>
+            Pizza Hut is located at <b>732 S Main St, Maryville, MO 64468</b>.Opposite to that store there is an another store 
+            named <b>Pagliai's Pizza</b>.And there are many other houses surrounding Pizza Hut.After we go a half mile further
+            we get wallmart.
+        </p>
     </body>
 </html>
-
-<h6> Pizza Hut </h6>
-
-    Pizza Hut is located at <b>732 S Main St, Maryville, MO 64468</b>.Opposite to that store there is an another store 
-    named <b>Pagliai's Pizza</b>.And there are many other houses surrounding Pizza Hut.After we go a half mile further
-    we get wallmart.
-
-    <hr> <h1>Kansas City International Airport</h1>
-<ol>
-<li> Get on I-29 N from NW 120th St 3 min (1.2 mi)</li>
-
-<li> Follow I-29 N to US-71 N in Jefferson Township. Take exit 56A from I-29 N 38 min (43.5 mi)</li>
-<ol>
-
-<li> Take exit 56A for US-71 toward US-59 N/Maryville</li>
-
-</ol>
-<li> US-71 N to your destination in Maryville 33 min (31.9 mi)</li>
-
-<li> Pizza Hut will be on the left side </li>
-</ol>
-
-<h1> Food items I reccomend</h1>
-
-<ul> NEW Spicy Veggie</ul>
-<ul> Cheese Pizza</ul>
-
-<a href="./aboutme.html">aboutme</a>
-
-<h1>Sports I recommend</h1>
-<p>Sports pertains to any form of competitive physical activity or game[1] that aims to use, maintain or improve physical ability and skills while providing enjoyment to participants and, in some cases, entertainment to spectators.
- Below table created gives the first column of name of sports,second column gives the location,tird column gives the amount of money required.</p>
- <html>
-<style>
-table, th, td {
-  border:1px solid black;
-}
-</style>
-<body>
-
-<h2>Table for sports</h2>
-
-<table style="width:100%">
- <table>
-    <tr>
-      <th>Name of the sport</th>
-      <th>Location of the sport</th>
-      <th>Price of the sport</th>
-    </tr>
-    <tr>
-      <td>Table Tennis</td>
-      <td>West Bengal</td>
-      <td>$100</td>
-    </tr>
-    <tr>
-      <td>Swimming</td>
-      <td>Kerala</td>
-      <td>$120</td>
-    </tr>
-    <tr>
-        <td>Archery</td>
-        <td>Bhutan</td>
-        <td>$170</td>
-      </tr>
-      <tr>
-        <td>Wrestling</td>
-        <td>India</td>
-        <td>$190</td>
-      </tr>
-  </table>
-<h1>Code Display</h1>
-
-  <blockquote>Given a graph and a source vertex in the graph, find the shortest paths from the source to all vertices in the given graph.Dijkstra’s algorithm is very similar to Prim’s algorithm for minimum spanning tree.
- Like Prim’s MST, we generate a SPT (shortest path tree) with a given source as a root. We maintain two sets, one set contains vertices included in the shortest-path tree, other set includes vertices not yet included in the shortest-path tree.
-At every step of the algorithm, we find a vertex that is in the other set (set of not yet included) and has a minimum distance from the source.</blockquote>
-
-<a href="https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/">Code Display</a>
-
-
-<pre>const int INF = 1000000000;
-    vector<vector<pair<int, int>>> adj;
-    
-    void dijkstra(int s, vector<int> & d, vector<int> & p) {
-        int n = adj.size();
-        d.assign(n, INF);
-        p.assign(n, -1);
-        vector<bool> u(n, false);
-    
-        d[s] = 0;
-        for (int i = 0; i < n; i++) {
-            int v = -1;
-            for (int j = 0; j < n; j++) {
-                if (!u[j] && (v == -1 || d[j] < d[v]))
-                    v = j;
-            }
-    
-            if (d[v] == INF)
-                break;
-    
-            u[v] = true;
-            for (auto edge : adj[v]) {
-                int to = edge.first;
-                int len = edge.second;
-    
-                if (d[v] + len < d[to]) {
-                    d[to] = d[v] + len;
-                    p[to] = v;
-                }
-            }
-        }
-    }</pre>
